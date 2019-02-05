@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "@babel/env",
+    "@vue/app"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "babel-plugin-dotenv",
+      {
+        "replacedModuleName": "babel-dotenv"
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "~": "./src",
+          "@components": "./src/components",
+          "@services": "./src/services",
+          "@views": "./src/views"
+        }
+      }
+    ]
+  ]
+}
